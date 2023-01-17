@@ -1,5 +1,7 @@
 
 
+document.write('hola desde js');
+
 function saludar() {
     console.log('Hola Mundo');
 }
