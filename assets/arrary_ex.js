@@ -16,7 +16,6 @@ console.log(n3) // '', null
 numbers.push(n3)
 
 let sum = parseInt(numbers[0]) + parseInt(numbers[1]) + parseInt(numbers[2])
-
 alert(sum)
 
 
@@ -25,3 +24,4 @@ alert(sum)
 console.log(numbers)
 console.log(numbers[numbers.length -1])
 console.log(numbers[0])
+
