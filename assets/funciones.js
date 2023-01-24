@@ -37,5 +37,29 @@ function funcion_parametros(num1,num2){
 funcion_parametros('123','123123',true);
 
 
+let saludar_flecha = () => {
+    console.log('saludar flecha')
+}
+
+
+//Antes
+var fecha = new Date(),
+  hora = fecha.getHours();
+
+var saludo = function (hr) {
+  if (hr <= 5) {
+    return 'No me jodas!!!';
+  } else if(hr >= 6 && hr <= 11) {
+    return 'Buenos días!!!';
+  } else if(hr >= 12 && hr <= 18) {
+    return 'Buenas tardes!!!';
+  } else {
+    return 'Buenas noches!!!';
+  }
+};
+
+console.log( saludo(hora) ); //Imprime el saludo dependiendo la hora del día
+
+
 
 
