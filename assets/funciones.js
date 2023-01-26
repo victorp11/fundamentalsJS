@@ -44,11 +44,11 @@ let saludar_flecha = () => {
 
 //Antes
 var fecha = new Date(),
-  hora = fecha.getHours();
+hora = fecha.getHours();
 
 var saludo = function (hr) {
   if (hr <= 5) {
-    return 'No me jodas!!!';
+    return 'Es muy temprano!!';
   } else if(hr >= 6 && hr <= 11) {
     return 'Buenos días!!!';
   } else if(hr >= 12 && hr <= 18) {

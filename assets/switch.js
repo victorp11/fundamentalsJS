@@ -1,5 +1,23 @@
 
 
+
+
+const edad = 2
+
+switch (edad) {
+    case 0 :
+        console.log('Reprobado');
+        break;
+    case 9 :
+        console.log('323');
+    case 8 :
+        
+    default:
+        console.log(edad);
+        break;
+}
+
+
 /*
 const payment_method = 'cas3h'
 
@@ -99,7 +117,7 @@ switch (edad) {
 }
 */
 
-
+/*
 
 i = 0; // Inicialización de la variable contador
 
@@ -109,3 +127,4 @@ while (i < 5) {
 
   i = i + 1; // Incrementamos el valor de i
 }
+*/

@@ -22,3 +22,6 @@ if (dinero > retirar){
 }
 
 
+
+
+let calificacion = prom
