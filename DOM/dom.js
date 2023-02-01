@@ -117,3 +117,60 @@ const changeTaskState = event => {
     event.target.classList.add('alert', 'alert-danger');
     event.target.innerHTML = 'terminado'
 }
+
+
+//Consumir recursos dinamicos de imagenes
+let img = document.createElement("img");
+img.src = "https://picsum.photos/seed/picsum/200/300";
+
+img.style.border = "10px solid orange";
+img.style.borderRadius = "10px";
+
+document.body.appendChild(img);
+
+
+//adecuarlo al estilo de nuesta pagina
+document.querySelectorAll('div')[0].appendChild(img);
+
+
+for(let i = 0; i < 10; i++) {
+	const img = document.createElement("img");
+	img.src = "https://picsum.photos/200/301?id=" + i;
+	img.addEventListener("click", function() {
+		console.log(i); // selected index number
+		img.style.border = "10px solid orange";
+
+	})
+	document.body.appendChild(img);
+    //document.querySelectorAll('div')[0].appendChild(img);
+}
+
+
+
+for(let i = 0; i < 10; i++) {
+    const img = document.createElement("img");
+    img.src = "https://picsum.photos/200/301?id=" + i;
+    img.classList.add("img-margin");
+    document.querySelectorAll('div')[0].appendChild(img);
+}
+
+
+for(let i = 0; i < 10; i++) {
+    const img = document.createElement("img");
+    img.src = "https://picsum.photos/200/301?id=" + i;
+  
+    img.setAttribute("class", "img-margin");
+  
+    img.addEventListener("click", function() {
+  
+      images =  document.querySelectorAll('img')  
+      for (var i = 0; i < images.length; i++) {
+        console.log(images[i])
+        images[i].style.border = "";
+        //images[i].classList.remove('img-rounded-border');
+      }
+      img.style.border = "10px solid orange";
+      //img.classList.add("img-rounded-border");
+    })
+    document.querySelectorAll('div')[0].appendChild(img);
+  }

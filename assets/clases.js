@@ -1,5 +1,7 @@
 
-
+let Hola = '123'
+let HOLA = 123;
+let HoLa = '333'
 
 class Perro {
     constructor(nombre) {
@@ -18,9 +20,12 @@ var mascota_1 = new Perro('Pancho');
 mascota_1.hablar(); // Pancho ladra.
 document.writeln('</br>');
 mascota_1.comer()
+
 document.writeln('</br>');
 var mascota_2 = new Perro('Kika');
 mascota_2.hablar(); // Kika ladra.
+
+
 
 
 
