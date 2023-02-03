@@ -1,5 +1,68 @@
 
 
+
+
+
+function square(number){
+  return number * number
+}
+
+document.writeln(square (2))
+
+
+
+
+
+function saludar(){
+  console.log(arguments)
+  document.writeln('Saludar')
+}
+
+function saludar_nombre(nombre, paterno){
+  console.log(arguments)
+  document.writeln('</br>')
+  document.writeln('Hola '+nombre+', como estas?')
+}
+
+//llamada de una funcion
+saludar()
+
+//llamada de una funcion con parametros
+saludar_nombre('Victor','Ponce',123)
+
+//funciones de flecha
+let saludar_flecha = (nombre) =>{
+  document.writeln('</br>')
+  document.writeln('SALUDAR DESDE LA FUNCION FLECHA,'+ nombre)
+}
+
+
+function square(number){
+  return number * number
+}
+
+saludar_flecha('Victor')
+
+
+let fecha = new Date();
+let hora = fecha.getHours()
+
+
+function valida_hora(hora){
+  if(hora <= 5){
+    document.writeln('Buenas madrugadas!!')
+  }else if(hora > 5 && hora < 12){
+    document.writeln('Buenos días!!')
+  }else{
+    document.writeln('Buenas noches!!')
+  }
+}
+
+
+
+
+
+/*
 document.write('hola desde js');
 
 function saludar() {
@@ -60,6 +123,7 @@ var saludo = function (hr) {
 
 console.log( saludo(hora) ); //Imprime el saludo dependiendo la hora del día
 
+*/
 
 
 
