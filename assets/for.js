@@ -1,11 +1,32 @@
 
 
+//    <h1>  valor h1 </h1>
+//    <h2>  valor h1 </h1>
 
-let i 
-for (i=0;i<=10;i++) { 
+for (i=1;i<=6;i++) { 
+
+    document.write("<h" + i + "> Encabezado de nivel " + i + "</h" + i + ">") 
+}
+
+
+ /*
+for ( i=0;i<=10;i++) { 
    	document.write(i)
    	document.write("<br>") 
 }
+
+console.log(i)*/
+
+/*
+
+
+
+
+
+
+
+
+
 
 
 const enterprises =['TESLA','AMAZON','MICROSOFT','META']
@@ -38,3 +59,5 @@ for (i=0;i<=1000;i+=50)
     for (i=1;i<=6;i++) { 
         document.write("<h" + i + "> Encabezado de nivel " + i + "</h" + i + ">") 
     }
+
+    */

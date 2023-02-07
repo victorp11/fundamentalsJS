@@ -14,6 +14,5 @@ let Auto = {
     };
 
 
-
     console.log(Auto.modelo); // "F-150"
     Auto.apagar(); // "El auto está apagandov
