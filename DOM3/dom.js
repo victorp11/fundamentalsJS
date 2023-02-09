@@ -22,6 +22,19 @@ for(let i=0; i < serie_2.length;i++){
 }*/
 
 
+for(let i = 0; i < 10; i++) {
+    const img = document.createElement("img");
+    img.src = "https://picsum.photos/200/301?id=" + i;
+    img.addEventListener("click", function() {
+    console.log(i); // selected index number
+    img.style.border = "10px solid orange";
+        })
+        document.body.appendChild(img);
+        //document.querySelectorAll('div')[0].appendChild(img);
+    }
+    
+
+
 let series = {
                 serie_0: {name: 'nombre', descripcion: 'Desc'},
                 serie_1: {name: 'nombre_2', descripcion: 'Desc 2'},
@@ -61,21 +74,34 @@ src.appendChild(img);
 
 var login = document.getElementById("btn_login");
 
+var modal = document.getElementById("exampleModal");
+
+
+
+
+
+
+
 function doLogin(){
 
     
-
-
     var user = document.getElementById("user").value;
     var pass = document.getElementById("password").value;
 
     if (user === pass){
         alert('Ingreso exitoso!')
-        document.cookie = "login=true";
-        location.reload();
+        let modal = bootstrap.Modal.getOrCreateInstance(document.getElementById('exampleModal')) // Returns a Bootstrap modal instance
+        // Show or hide:
+        //modal.show();
+        modal.hide();
+        let btn_login =document.getElementById('btn_login')
+        btn_login.className = "btn btn-success";
+        btn_login.innerHTML = 'Cerrar sesión'
+        //document.cookie = "login=true";
+        //location.reload();
     }else{
         document.cookie = "login=true";
-        alert('Password Incorrecto')
+        alert('Usuario/Password Incorrecto')
     }
 
 }
@@ -96,12 +122,46 @@ function closeDialog() {
 
 
 function crearSerie(){
-
-    
-
-
     var user = document.getElementById("nombreSerie").value;
     var pass = document.getElementById("password").value;
-
-
 }
+
+
+
+function editarSerie(){
+    let nombre = document.getElementById("nombreSerie").value;
+    let descripcion = document.getElementById("descripcionSerie").value;
+    let imagen = document.getElementById("imagenSerie").value;
+
+
+    document.getElementById("imagen_serie_1").src = imagen;
+    document.getElementById("titulo_serie_1").innerHTML = nombre;
+    document.getElementById("descripcion_serie_1").innerHTML = descripcion;
+}
+
+
+
+//Iteramos todas las imagenes y le asigno un listener
+for(i=0; i< document.querySelectorAll('.card').length;i++){
+    //Tomamos cada una de las tarjetas
+    let card_info = document.querySelectorAll('.card .card-img-top')[i]
+    //asigno listener dinamico
+    card_info.addEventListener("click", function() {
+        
+        for (let i = 0; i < document.querySelectorAll('.card').length; i++) {
+                document.querySelectorAll('.card .card-img-top')[i].style.border = ""
+            } 
+    
+        console.log(i); // selected index number
+        card_info.style.border = "10px solid orange";
+        })
+}
+
+
+
+
+function visitarNetflix(event) {
+console.log(event)
+    event.preventDefault();
+    alert("Se ah dado clic al enlace pero el sitio no ah sido abierto");
+  }
